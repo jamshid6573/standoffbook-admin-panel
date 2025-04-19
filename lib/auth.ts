@@ -127,8 +127,7 @@ export const exchangeCodeForToken = async (code: string): Promise<{ user: User; 
   }
 }
 
-// Добавление заголовка авторизации к запросам
 export const authHeader = () => {
   const token = getToken()
   return token ? { Authorization: `Bearer ${token}` } : {}
-}
+};
